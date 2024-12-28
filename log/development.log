@@ -35,3 +35,13 @@ Processing by SayController#goodbye as HTML
 Completed 200 OK in 91ms (Views: 52.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/say/hello" for 127.0.0.1 at 2024-12-27 19:07:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Demo'*/[0m
+Processing by SayController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 65.8ms | GC: 0.0ms)
+Completed 200 OK in 210ms (Views: 89.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
