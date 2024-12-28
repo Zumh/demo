@@ -45,3 +45,62 @@ Processing by SayController#hello as HTML
 Completed 200 OK in 210ms (Views: 89.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/say/hello" for 127.0.0.1 at 2024-12-27 19:25:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Demo'*/[0m
+Processing by SayController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (Duration: 7.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'link_toTime' for an instance of #<Class:0x00007fdb03935018>)
+Caused by: NameError (undefined local variable or method 'link_toTime' for an instance of #<Class:0x00007fdb03935018>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'link_toTime' for an instance of #<Class:0x00007fdb03935018>):
+    1: <h1>Hello from Rails!</h1>
+    2: <p>
+    3: 
+    4:     It is now <%= link_toTime.now %>
+    5: 
+    6:     Sy <a href="/say/goodbye">Goodbye </a>!
+    7: </p>
+  
+app/views/say/hello.html.erb:4
+
+Information for cause: NameError (undefined local variable or method 'link_toTime' for an instance of #<Class:0x00007fdb03935018>):
+  
+app/views/say/hello.html.erb:4
+Started GET "/favicon.ico" for 127.0.0.1 at 2024-12-27 19:25:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/say/hello" for 127.0.0.1 at 2024-12-27 19:25:46 -0500
+Processing by SayController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (Duration: 10.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 81.6ms | GC: 15.3ms)
+Completed 200 OK in 140ms (Views: 86.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 15.3ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2024-12-27 19:25:48 -0500
+Processing by SayController#goodbye as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering say/goodbye.html.erb within layouts/application
+  Rendered say/goodbye.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 9.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2024-12-27 19:25:50 -0500
+Processing by SayController#hello as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 9.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
