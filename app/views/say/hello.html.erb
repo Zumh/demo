@@ -1,8 +1,16 @@
 <h1>Hello from Rails!</h1>
 <p>
 
-    It is now <%= Time.now %>
+    It is now <%= @time %>
 
-    Sy <a href="/say/goodbye">Goodbye </a>!
+   
 </p>
+<p>
+Time to say 
+<!-- The method call link_to "Goodbye", say_goodbye_path generates a hyperlink that links to the say/goodbye path. -->
+    <%= link_to "Goodbye", say_goodbye_path %>
+<!--
+ Say <a href="/say/goodbye">Goodbye </a>!
+-->
+ </p>
 

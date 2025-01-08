@@ -2,7 +2,9 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  # 
+  # Configure Web Console to allow access from any IP address
+  config.web_console.whitelisted_ips = %w[ 0.0.0.0/0 ::/0 ]
   # Make code changes take effect immediately without server restart.
   config.enable_reloading = true
 
